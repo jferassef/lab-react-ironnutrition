@@ -7,7 +7,6 @@ import Search from './components/Search';
 
 function App() {
   const [foodsArr, setFoodsArr] = useState(foods);
-  const [searchedTerm, setSearchedTerm] = useState('');
 
   const handleDelete = (index) => {
     const newFoodsArr = [...foodsArr];
@@ -38,10 +37,7 @@ function App() {
   return (
     <div className="App">
       {/* <AddFoodForm addFood={addNewFood} /> */}
-      <Search
-        searchedString={searchedTerm}
-        setSearchedString={setSearchedTerm}
-      />
+      <Search foods={foodsArr} setFoods={setFoodsArr} />
       <h1>Food List</h1>
       <div className="foodList">
         {foodsArr.map((food, index) => {
