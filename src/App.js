@@ -17,26 +17,9 @@ function App() {
     setFoodsArr(newFoodsArr);
   };
 
-  // const handleDelete = (index) => {
-  //   setFoodsArr(foodsArr.filter((food) => food[index] !== index));
-  // };
-
-  // let searchedFood = null;
-  // searchedTerm !== ''
-  //   ? (searchedFood = foodsArr.filter((food) => {
-  //       return food.name.toLowerCase().includes(searchedTerm.toLowerCase());
-  //     }))
-  //   : (searchedFood = foods);
-
-  // const addNewFood = (newFood) => {
-  //   const updatedFoods = [...foodsArr, newFood];
-
-  //   setFoodsArr(updatedFoods);
-  // };
-
   return (
     <div className="App">
-      {/* <AddFoodForm addFood={addNewFood} /> */}
+      <AddFoodForm foods={foodsArr} setFoods={setFoodsArr} />
       <Search foods={foodsArr} setFoods={setFoodsArr} />
       <h1>Food List</h1>
       <div className="foodList">
