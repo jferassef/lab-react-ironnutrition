@@ -18,6 +18,10 @@ function App() {
     setFoodsArr(newFoodsArr);
   };
 
+  // const handleDelete = (index) => {
+  //   setFoodsArr(foodsArr.filter((food) => food[index] !== index));
+  // };
+
   // let searchedFood = null;
   // searchedTerm !== ''
   //   ? (searchedFood = foodsArr.filter((food) => {
@@ -40,13 +44,9 @@ function App() {
       />
       <h1>Food List</h1>
       <div className="foodList">
-        {foods.map((food) => {
+        {foodsArr.map((food, index) => {
           return (
-            <FoodBox
-              food={food}
-              handleDelete={handleDelete}
-              index={foods.indexOf(food)}
-            />
+            <FoodBox food={food} handleDelete={handleDelete} index={index} />
           );
         })}
       </div>
